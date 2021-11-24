@@ -1,0 +1,49 @@
+{ "name": "test",
+  "plot": false,
+  "save_folder": null,
+  "n_simulations": 100,
+  "save_name": "case",
+  "geometry_params": {
+    "boundary": {
+      "shape": "square",
+      "lx": 2,
+      "ly": 2,
+      "xc": 0.0,
+      "yc": 0.0
+    },
+    "hole": {
+      "shape": "square",
+      "lx": [0.25, 1.0],
+      "ly": [0.25, 1.0],
+      "xc": [-0.5, 0.5],
+      "yc": [-0.5, 0.5]
+    }
+  },
+
+  "mesh_params": {
+    "boundary": {
+      "dx": 0.02,
+      "dy": 0.02
+    },
+    "hole": {
+      "dx": 0.02,
+      "dy": 0.02,
+      "clockwise": true
+    }
+  },
+  "equation_params": {
+    "name": "Laplace",
+    "element": "P1"
+  },
+  "bc_params": {
+    "boundary": {
+      "kind": "Dirichlet",
+      "values": [1.0, 1.0, 1.0, 1.0]
+    },
+    "hole": {
+      "kind": "Dirichlet",
+      "values": [0.0, 0.0, 0.0, 0.0]
+    }
+  }
+}
+

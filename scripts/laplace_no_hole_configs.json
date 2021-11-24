@@ -1,0 +1,33 @@
+{ "name": "test",
+  "plot": false,
+  "save_folder": null,
+  "n_simulations": 250,
+  "save_name": "case",
+  "geometry_params": {
+    "boundary": {
+      "shape": "square",
+      "lx": 2,
+      "ly": 2,
+      "xc": 0.0,
+      "yc": 0.0
+    }
+  },
+
+  "mesh_params": {
+    "boundary": {
+      "dx": 0.05,
+      "dy": 0.05
+    }
+  },
+  "equation_params": {
+    "name": "Laplace",
+    "element": "P1"
+  },
+  "bc_params": {
+    "boundary": {
+      "kind": "Dirichlet",
+      "values": [[1.0, 1.0], [0.0, 0.0], [0.0, 1.0], [0.0, 1.0]]
+    }
+  }
+}
+
